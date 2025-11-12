@@ -45,7 +45,7 @@
 
     <!-- Floating Button -->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fabBtn"
+        android:id="@+id/BtnFabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add task"
