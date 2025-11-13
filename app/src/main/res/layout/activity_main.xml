@@ -18,19 +18,30 @@
             app:cardBackgroundColor="#06CEAC"
             android:elevation="8dp">
 
-            <EditText
-                android:id="@+id/etSearch"
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search tasks..."
+                app:iconifiedByDefault="false"
+                android:background="@drawable/bg_search_view"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp" />
+
+<!--            <SearchView
+                android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/bg_search"
-                android:hint="Search by title"
+                android:queryHint="Search by title"
                 android:drawableStart="@drawable/icon_search_24"
                 android:drawablePadding="8dp"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp" />
+                android:paddingEnd="12dp" />-->
         </androidx.cardview.widget.CardView>
 
         <!-- RecyclerView -->
@@ -40,7 +51,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_task" />
+            tools:listitem="@layout/item_task" >
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
     <!-- Floating Button -->
@@ -58,6 +70,7 @@
         android:layout_marginBottom="60dp"
         android:backgroundTint="#06CEAC"
         app:elevation="8dp"
-        app:cornerRadius="50dp"/>
+        app:cornerRadius="50dp">
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
