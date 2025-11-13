@@ -1,3 +1,18 @@
+/**
+ * AddUserActivity handles adding a new task or editing an existing task in the Task Manager app.
+ *
+ * Features:
+ * - If launched with an existing task (via intent), pre-fills the form for editing.
+ * - Validates user input for title, description, and due date.
+ * - Uses Room database (TaskDAO) for adding or updating tasks.
+ *
+ * Intent extras:
+ * - "edit" -> Task object to be edited
+ *
+ * Buttons:
+ * - btnAddTask: Adds a new task or updates an existing one depending on context.
+ */
+
 package com.example.taskmanager.views
 
 import android.content.Intent
@@ -31,13 +46,15 @@ class AddUserActivity : AppCompatActivity() {
         binding = ActivityAddUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize Room database and DAO
         val dataBase = Room.databaseBuilder(
             applicationContext,
             TaskDataBase::class.java,
             "Task_DB"
         ).allowMainThreadQueries().build()
-
         dao = dataBase.getTaskDAO()
+
+        // Check if this activity is launched to edit an existing task
         if(intent.hasExtra(editKey)){
             binding.btnAddTask.text = update
 
@@ -55,12 +72,14 @@ class AddUserActivity : AppCompatActivity() {
             binding.btnAddTask.text = add
         }
 
+        // Handle Add/Update button click
         binding.btnAddTask.setOnClickListener {
 
             val title = binding.etTitle.text.toString().trim()
             val description = binding.etDescription.text.toString().trim()
             val dueDate = binding.etDueDate.text.toString().trim()
 
+            // Input validation
             if (title.isEmpty()){
                 binding.etTitle.error = "Title is required "
                 binding.etTitle.requestFocus()
@@ -77,6 +96,8 @@ class AddUserActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+
+            // Add or update task based on button text
             if(binding.btnAddTask.text.toString()==add){
                 addTask(title,description,dueDate)
             }else{
@@ -85,6 +106,7 @@ class AddUserActivity : AppCompatActivity() {
         }
     }
 
+    // Close activity and return to previous screen after update and add tasks
     private fun updateTask(title: String, description: String, dueDate: String) {
         val updatetask = Task(taskID, title, description, dueDate )
         dao.updateTask(updatetask)
