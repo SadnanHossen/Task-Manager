@@ -1,11 +1,11 @@
-package com.example.taskmanager
+package com.example.taskmanager.views
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.room.Room
+import com.example.taskmanager.Database.Task
+import com.example.taskmanager.Database.TaskDataBase
 import com.example.taskmanager.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val sadnan= Task(0,"make TAsk MAnager","on going","2/2/2",false)
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -26,11 +26,15 @@ class MainActivity : AppCompatActivity() {
 
         val dao = dataBase.getTaskDAO()
 
+
+
         binding.BtnFabAdd.setOnClickListener {
-            dao.addTask(sadnan)
+            val intent = Intent(this@MainActivity, AddUserActivity::class.java)
+            startActivity(intent)
+            finish()
+
+
         }
-
-
 
     }
 }

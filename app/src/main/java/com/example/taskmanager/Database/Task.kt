@@ -1,14 +1,13 @@
-package com.example.taskmanager
+package com.example.taskmanager.Database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity("Task_table")
 data class Task(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val title: String,
     val description: String,
-    val dueDate: String,
-    val done: Boolean = false
+    val dueDate: String
 )
