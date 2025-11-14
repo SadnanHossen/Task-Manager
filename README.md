@@ -20,6 +20,23 @@ Users can add, edit, delete, and manage tasks with due dates and completion stat
 
  Screenshots :
 
+ <table>
+  <tr>
+    <th>Home Screen</th>
+    <th>Add Task</th>
+    <th>Edit Task</th>
+    <th>Task Details</th>
+    <th>Search</th>
+  </tr>
+  <tr>
+    <td> <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_main%20ui.jpg" width = "200dp"/></td>
+    <td><img src="images/add.jpg" width="200"></td>
+    <td><img src="images/edit.jpg" width="200"></td>
+    <td><img src="images/details.jpg" width="200"></td>
+    <td><img src="images/search.jpg" width="200"></td>
+  </tr>
+</table>
+
 1. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_main%20ui.jpg" width = "200dp"/>
 2. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_add%20task.jpg" width = "200dp"/>
 3. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_requeird.jpg" width = "200dp"/>
