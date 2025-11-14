@@ -8,13 +8,21 @@ Users can add, edit, delete, and manage tasks with due dates and completion stat
  Features :
 
 ✔ Add new tasks
+
 ✔ Edit existing tasks
+
 ✔ Delete tasks with confirmation dialog
+
 ✔ Mark tasks as completed
+
 ✔ Store tasks locally using Room (SQLite)
+
 ✔ RecyclerView with custom CardView item
+
 ✔ Material UI & Date Picker for due dates
+
 ✔ Search tasks 
+
 ✔ Smooth, clean, modern UI
 
 
@@ -23,28 +31,26 @@ Users can add, edit, delete, and manage tasks with due dates and completion stat
  <table>
   <tr>
     <th>Home Screen</th>
-    <th>Add Task</th>
-    <th>Edit Task</th>
-    <th>Task Details</th>
-    <th>Search</th>
+   <th>Add task</th>
+   <th>Requierd indication</th>
+  
+   <th>Task list</th>
+    <th>Update task</th>
+    <th>Task list </th>
+    <th>Task list after deleted</th>
+    <th>Searching task</th>
   </tr>
   <tr>
-    <td> <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_main%20ui.jpg" width = "200dp"/></td>
-    <td><img src="images/add.jpg" width="200"></td>
-    <td><img src="images/edit.jpg" width="200"></td>
-    <td><img src="images/details.jpg" width="200"></td>
-    <td><img src="images/search.jpg" width="200"></td>
+    <td> <img src = "Images/Task Manager_main ui.jpg" width = "200dp"/></td>
+    <td><img src="Images/Task Manager_add task.jpg" width="200"></td>
+    <td><img src="Images/Task Manager_requeird.jpg" width="200"></td>
+    <td><img src="Images/Task Manager_1st task.jpg" width="200"></td>
+    <td><img src="Images/Task Manager_update page.jpg" width="200"></td>
+   <td><img src="Images/Task Manager_3 tasks.jpg" width="200"></td>
+   <td><img src="Images/Task Manager_delete task.jpg" width="200"></td>
+   <td><img src="Images/Task Manager_search task.jpg" width="200"></td>
   </tr>
 </table>
-
-1. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_main%20ui.jpg" width = "200dp"/>
-2. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_add%20task.jpg" width = "200dp"/>
-3. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_requeird.jpg" width = "200dp"/>
-4. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_1st%20task.jpg" width = "200dp"/>
-5. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_update%20page.jpg" width = "200dp"/>
-6. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_3%20tasks.jpg" width = "200dp"/>
-7. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_delete%20task.jpg" width = "200dp"/>
-8. <img src = "https://github.com/SadnanHossen/Task-Manager/blob/156b92a2598a78a409566debcd87ab55b272cffd/Task%20Manager_search%20task.jpg" width = "200dp"/>
 
 
 Screens Included :
@@ -70,21 +76,21 @@ Tech Stack :
 | **ViewBinding**         | Easy UI access            |
 
 
- Project Structure :
-app/
- ├── data/
- │    ├── Task.kt               # Entity
- │    ├── TaskDao.kt            # DAO
- │    ├── TaskDatabase.kt       # Room Database
- ├── ui/
- │    ├── MainActivity.kt       # Task list
- │    ├── AddEditTaskActivity.kt# Add/Edit screen
- │    ├── TaskAdapter.kt        # RecyclerView adapter
- ├── res/layout/
- │    ├── activity_main.xml
- │    ├── item_task.xml
- │    ├── activity_add_edit_task.xml
-
+ Project Structure:  <br>
+app/ <br>
+ ├── data/ <br>
+ │    ├── Task.kt               # Entity <br>
+ │    ├── TaskDao.kt            # DAO <br>
+ │    ├── TaskDatabase.kt       # Room Database <br>
+ ├── ui/ <br>
+ │    ├── MainActivity.kt       # Task list <br>
+ │    ├── AddEditTaskActivity.kt# Add/Edit screen <br>
+ │    ├── TaskAdapter.kt        # RecyclerView adapter <br>
+ ├── res/layout/ <br>
+ │    ├── activity_main.xml <br>
+ │    ├── item_task.xml <br>
+ │    ├── activity_add_edit_task.xml <br>
+ 
 
 Room Database Overview :
 
