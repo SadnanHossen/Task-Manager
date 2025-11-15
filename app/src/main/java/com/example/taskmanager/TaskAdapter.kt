@@ -64,3 +64,4 @@ class TaskAdapter(val listner : HandleTaskClick, val taskList: List<Task>): Recy
     class taskVH(val binding: ItemTaskBinding): RecyclerView.ViewHolder(binding.root)
 
 }
+// end
